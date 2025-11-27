@@ -31,6 +31,7 @@ declare module '$env/static/private' {
 	export const USER: string;
 	export const npm_config_user_agent: string;
 	export const XDG_SESSION_TYPE: string;
+	export const GIT_ASKPASS: string;
 	export const npm_node_execpath: string;
 	export const CLUTTER_DISABLE_MIPMAPPED_TEXT: string;
 	export const SHLVL: string;
@@ -43,7 +44,9 @@ declare module '$env/static/private' {
 	export const GIO_LAUNCHED_DESKTOP_FILE: string;
 	export const GNOME_SHELL_SESSION_MODE: string;
 	export const GTK_MODULES: string;
+	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const FNM_ARCH: string;
+	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const MANAGERPID: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_local_prefix: string;
@@ -89,6 +92,7 @@ declare module '$env/static/private' {
 	export const XDG_SESSION_DESKTOP: string;
 	export const XAUTHORITY: string;
 	export const LS_COLORS: string;
+	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const FNM_DIR: string;
 	export const TERM_PROGRAM: string;
 	export const npm_lifecycle_script: string;
@@ -102,6 +106,7 @@ declare module '$env/static/private' {
 	export const GDMSESSION: string;
 	export const LESSCLOSE: string;
 	export const GJS_DEBUG_OUTPUT: string;
+	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const QT_IM_MODULE: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_init_module: string;
@@ -151,6 +156,7 @@ declare module '$env/dynamic/private' {
 		USER: string;
 		npm_config_user_agent: string;
 		XDG_SESSION_TYPE: string;
+		GIT_ASKPASS: string;
 		npm_node_execpath: string;
 		CLUTTER_DISABLE_MIPMAPPED_TEXT: string;
 		SHLVL: string;
@@ -163,7 +169,9 @@ declare module '$env/dynamic/private' {
 		GIO_LAUNCHED_DESKTOP_FILE: string;
 		GNOME_SHELL_SESSION_MODE: string;
 		GTK_MODULES: string;
+		VSCODE_GIT_ASKPASS_MAIN: string;
 		FNM_ARCH: string;
+		VSCODE_GIT_ASKPASS_NODE: string;
 		MANAGERPID: string;
 		npm_config_userconfig: string;
 		npm_config_local_prefix: string;
@@ -209,6 +217,7 @@ declare module '$env/dynamic/private' {
 		XDG_SESSION_DESKTOP: string;
 		XAUTHORITY: string;
 		LS_COLORS: string;
+		VSCODE_GIT_IPC_HANDLE: string;
 		FNM_DIR: string;
 		TERM_PROGRAM: string;
 		npm_lifecycle_script: string;
@@ -222,6 +231,7 @@ declare module '$env/dynamic/private' {
 		GDMSESSION: string;
 		LESSCLOSE: string;
 		GJS_DEBUG_OUTPUT: string;
+		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		QT_IM_MODULE: string;
 		npm_config_globalconfig: string;
 		npm_config_init_module: string;

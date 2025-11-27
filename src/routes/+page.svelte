@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>My SvelteKit Page | Page-Title</title>
+	<title>Device Logger</title>
 	<meta name="description" content="Keywords: description, page-title." />
 	<meta name="keywords" content="SvelteKit, Tailwind CSS, description, page-title, example" />
 </svelte:head>

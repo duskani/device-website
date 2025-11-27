@@ -7,9 +7,17 @@ function toggleNav() {
 }
 
 function toggleCreate() {
-  const createScreen = document.getElementById("CreateScreen");
-  createScreen.style.display = createScreen.style.display === "none" ? "block" : "none";
+  // gives the function to toggle button 
+  // block is display, none is still a display but is invisible having none at line 13 would cause a double click 
+  var CreateScreen = document.getElementById("CreateScreen"); 
+  if (CreateScreen.style.display != 'block'){
+    CreateScreen.style.display = 'block'; 
+  } else {
+    CreateScreen.style.display = 'none';
+  }
 }
+
+
 
 function createNewDevice() {
   let devicename = document.getElementById("device-name")
@@ -31,9 +39,11 @@ function createNewDevice() {
   <button class="createdevice w-full flex flex-col mx-auto" href="javascript:void(0)" onclick={toggleCreate}>create device</button>
 </div>
 
-<div id="CreateScreen" class="createScreen">
+<div id="CreateScreen" class="createScreen ">
   <button href="javascript:void(0)" class="closebtn" onclick={toggleCreate}>&times;</button>
-  <input type="text" placeholder="device name" id="device-name">
+  <input type="text" placeholder="Device Name" id="device-name" class="border-solid border-black">
+  <input type="text" placeholder="Device Model" class="border-solid border-black"> 
+  <!--Work on this add more inputs and other shiii-->
   <button class="createnewdevice" href="javascript:void(0)" onclick={createNewDevice}>create</button>
 </div>
 
@@ -80,16 +90,14 @@ function createNewDevice() {
 }
 
 .createScreen {
-  height: 80%;
-  width: 78%;
+  height: 33rem;
+  width: 70rem;
+  margin-top: 5rem;
   position: fixed;
-  z-index: 2;
-  top: 15%;
-  left: 20%;
   background-color: #87BBB7;
-  overflow-x: hidden;
   padding-top: 60px;
-  display: none;
+  display: none; 
+  
 }
 
 .createScreen .closebtn {
