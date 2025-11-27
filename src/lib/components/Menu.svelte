@@ -16,7 +16,7 @@ function createNewDevice() {
   const div = document.createElement("div")
   const container = document.getElementById("devicecontainer")
   div.id = "device";
-  div.className = "flex flex-wrap bg-slate-300 w-[19rem] h-[13rem] justify-center";
+  div.className = "flex flex-wrap bg-slate-300 w-[19rem] h-[13rem] justify-center ";
   div.innerHTML += 
       '<p class="">device name</p> <img src="placeholder.png" alt="placeholder" class="w-[16rem] h-[7rem]"> <p class=""> expose points: </p>';
 
@@ -28,7 +28,7 @@ function createNewDevice() {
 
 <div id="mySidenav" class="sidenav">
   <button href="javascript:void(0)" class="closebtn" onclick={toggleNav}>&times;</button>
-  <button class="createdevice" href="javascript:void(0)" onclick={toggleCreate}>create device</button>
+  <button class="createdevice w-full flex flex-col mx-auto" href="javascript:void(0)" onclick={toggleCreate}>create device</button>
 </div>
 
 <div id="CreateScreen" class="createScreen">
