@@ -4,9 +4,15 @@ function toggleNav() {
   const createbutton = document.getElementById("createdevice");
   nav.style.width = nav.style.width === "250px" ? "0px" : "250px";
   createbutton.style.width = createbutton.style.width === "7.438rem" ? "0px" : "7.438rem";
+  
+   
+
+
+  
 }
 
 function toggleCreate() {
+  
   // gives the function to toggle button 
   // block is display, none is still a display but is invisible having none at line 13 would cause a double click 
   var CreateScreen = document.getElementById("CreateScreen"); 
@@ -15,10 +21,19 @@ function toggleCreate() {
   } else {
     CreateScreen.style.display = 'none';
   }
+  
+
+
+
+  // Attempt to close navbar upon clicking "create button" got no clue though 
+  //create_Device_Btn.addEventListener('click', () => {
+    //toggleCreate.classlist.remove('none');
+  //});
+
 }
 
 
-
+// create a new device node 
 function createNewDevice() {
   let devicename = document.getElementById("device-name")
   const div = document.createElement("div")
@@ -34,21 +49,49 @@ function createNewDevice() {
 }
 </script>
 
+
+
+<!--Nav bar-->
 <div id="mySidenav" class="sidenav">
   <button href="javascript:void(0)" class="closebtn" onclick={toggleNav}>&times;</button>
-  <button class="createdevice w-full flex flex-col mx-auto" href="javascript:void(0)" onclick={toggleCreate}>create device</button>
+  <!--Create Button-->
+  <button class="createdevice w-full flex flex-col mx-auto" id="create_Device_Btn" href="javascript:void(0)" onclick={toggleCreate}>create device</button>
+  
 </div>
 
+
+<!--Create Device menu-->
 <div id="CreateScreen" class="createScreen ">
+  <div class="flex flex-row w-full h-full">
+  <form class="flex flex-col h-full justify-evenly  ml-[5rem]">
   <button href="javascript:void(0)" class="closebtn" onclick={toggleCreate}>&times;</button>
-  <input type="text" placeholder="Device Name" id="device-name" class="border-solid border-black">
-  <input type="text" placeholder="Device Model" class="border-solid border-black"> 
+  <input type="text" placeholder="Device Name" id="device-name" class="border-solid border-black border w-[30rem]">
+  <input type="text" placeholder="Device Model" class="border-solid border-black border w-[30rem]"> 
+  <input type="text" placeholder="Description" class="border-solid border-black border w-[20rem] h-[20rem]">
   <!--Work on this add more inputs and other shiii-->
+
+  <!--something is cutting the height in half preventing to move these inputs to the top-->
+  <div class="flex flex-col ml-[40rem] h-full ">
+  <input type="text" placeholder="Notes" class="border-solid border-black border w-[30rem]">
+  <input type="text" placeholder="Positives" class="border-solid border-black border w-[30rem]">
+  <input type="text" placeholder="Flaws" class="border-solid border-black border w-[30rem]">
+  </div>
+
   <button class="createnewdevice" href="javascript:void(0)" onclick={createNewDevice}>create</button>
+  </form>
+  </div>
 </div>
 
 <button style="font-size:30px;cursor:pointer;" class="burgermenu" onclick={toggleNav}>&#9776;</button>
 
+
+
+
+
+
+
+
+<!--CSS-->
 <style>
 
 .sidenav .createdevice {
