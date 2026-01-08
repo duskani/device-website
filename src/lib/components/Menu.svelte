@@ -1,13 +1,8 @@
 <script>
-function toggleNav() {
-  const nav = document.getElementById("mySidenav");
-  const createbutton = document.getElementById("createdevice");
-  nav.style.width = nav.style.width === "250px" ? "0px" : "250px";
-  createbutton.style.width = createbutton.style.width === "7.438rem" ? "0px" : "7.438rem";
-}
+
 
 function toggleCreate() {
-  
+  const createbutton = document.getElementById("createdevice");
   // gives the function to toggle button 
   // block is display, none is still a display but is invisible having none at line 13 would cause a double click 
   var CreateScreen = document.getElementById("CreateScreen"); 
@@ -60,65 +55,22 @@ function createNewDevice() {
 
 <!--Create Device menu-->
 <div class="flex flex-row w-1/2 h-full createScreen" id="CreateScreen">
-  <form class="flex flex-col h-full justify-evenly ml-[5rem] relative">
+  <form class="flex flex-col h-full justify-evenly ml-[5rem] ">
+    
+    <!-- Close Button -->
     <button
       href="javascript:void(0)"
       class="closebtn mr-[5rem]"
-      onclick={toggleCreate}>&times;</button
-    >
-    <!--Device Name-->
-    <input
-      type="text"
-      placeholder="Device Name"
-      id="device-name"
-      class="border-solid border-black border w-[30rem] mt-[3rem]"
-    />
-    <!--Device Model-->
-    <input
-      type="text"
-      placeholder="Device Model"
-      class="border-solid border-black border w-[30rem] mt-[2rem]"
-    />
+      onclick={toggleCreate}>&times;</button>
+   
 
-    <!--Device Description-->
-    <input
-      type="text"
-      placeholder="Description"
-      class="border-solid border-black border w-[20rem] h-[10rem] absolute"
-    />
-    <!--Work on this add more inputs and other shiii-->
 
-    <!--something is cutting the height in half preventing to move these inputs to the top-->
-
-    <!--Extra Notes-->
-    <div class="flex flex-col ml-[35rem] w-1/2 mb-[20rem] gap-[1rem] h-full">
-      <input
-        type="text"
-        placeholder="Notes"
-        class="border-solid border-black border w-[20rem] h-[10rem] "
-      />
-
-      <!--Positive notes about device-->
-      <div class="flex-row">
-        <input
-          type="text"
-          placeholder="Positives"
-          class="border-solid border-black border w-[10rem]"
-        />
-        <!--Negatives notes about device-->
-        <input
-          type="text"
-          placeholder="Flaws"
-          class="border-solid border-black border w-[10rem] h-[10rem]"
-        />
-      </div>
       <!--Create Button-->
       <button
         class="create_button"
         href="javascript:void(0)"
-        onclick={createNewDevice}>create</button
-      >
-    </div>
+        onclick={createNewDevice}>create</button>
+    
   </form>
 </div>
 

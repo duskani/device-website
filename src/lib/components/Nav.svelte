@@ -2,11 +2,7 @@
   import Menu from "$lib/components/Menu.svelte"
 </script>
 
-<nav class="flex flex-row items-center bg-[#9ED8D2] p-[2rem] w-full h-[3rem] gap-[1rem]">
-  <div class="logo"> <img class="logo" src="edenspritelogo.png" alt="logo"> </div>
-  <li class="justify-start"> <Menu /> </li>
 
-</nav>
 
 <style>
   /* .navbar {
